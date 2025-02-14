@@ -1,0 +1,705 @@
+    /* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    overflow: hidden; /* Prevent scrollbar from appearing */
+    position: relative;
+}
+
+
+/* Video Section */
+.video-section {
+    display: none; /* Hide the video section by default */
+}
+
+
+/* Full-Screen Overlay for Semi-Transparent Background */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6); /* Ensuring full coverage */
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation */
+nav {
+    position: absolute; /* Ensure nav is positioned absolutely initially */
+    top: 0;
+    width: 100%;
+    background: rgba(34, 34, 34, 0.8); /* Standout color */
+    border-radius: 15px; /* Rounded edges */
+    transition: all 0.3s ease; /* Smooth transition for floating effect */
+}
+
+.sticky {
+    position: fixed; /* Change to fixed when scrolling */
+    top: 0;
+    background: rgba(34, 34, 34, 0.9); /* Ensure background is visible */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add shadow for floating effect */
+    z-index: 1000; /* Ensure it stays above other content */
+    transition: all 0.3s ease; /* Smooth transition for floating effect */
+}
+
+
+
+.sticky {
+    position: fixed; /* Change to fixed when scrolling */
+    top: 0;
+    background: rgba(34, 34, 34, 0.9); /* Ensure background is visible */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add shadow for floating effect */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.logo {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #facc15; /* Text color */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.3s, letter-spacing 0.3s;
+    animation: fadeIn 1s ease-in-out; /* Animation for text */
+    position: relative; /* Ensure positioning for the pseudo-element */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Align with the bottom of the text */
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: #facc15; /* Color of the underline */
+    transform: scaleX(0); /* Start with no width */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+}
+
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Adjusted to align with the bottom of the text */
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: #facc15; /* Color of the underline */
+    transform: scaleX(0); /* Start with no width */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+}
+
+
+/* Remove underline animation */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Adjusted to align with the bottom of the text */
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: #facc15; /* Color of the underline */
+    transform: scaleX(0); /* Start with no width */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+}
+
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Adjusted to align with the bottom of the text */
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: #facc15; /* Color of the underline */
+    transform: scaleX(0); /* Start with no width */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+}
+
+
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 14px;
+    width: 100%;
+    height: 2px;
+    background-color: #facc15;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ffdd44;
+    transform: scale(1.1);
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.video-section {
+    position: relative;
+    height: 100vh; /* Set height for the video section */
+    overflow: hidden; /* Hide overflow */
+    
+}
+
+
+.background-video {
+    position: fixed; /* Change to fixed to reach the top of the website */
+    top: 0; /* Set top to 0 to ensure it reaches the top */
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Places video behind content */
+    transform: translate(-50%, 0); /* Adjust transform to center horizontally */
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0, 0, 0, 0.75)),url(Background video.mp4 );
+}
+
+.video-section .background-video {
+    position: absolute; /* Position the video in the video section */
+    top: 0;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, 0); /* Center the video */
+}
+
+
+.hero-content {
+    max-width: 600px;
+    padding: 20px;
+    background: ; /* Ensuring text is readable over video */
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content:hover {
+    transform: translateY(-5px);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    transition: color 0.3s, transform 0.3s;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1:hover {
+    color: #facc15;
+    transform: scale(1.05);
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    transition: color 0.3s, transform 0.3s;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p:hover {
+    color: #ffdd44;
+    transform: translateY(-3px);
+}
+
+.cta-button {
+    display: inline-block;
+    background: #facc15;
+    color: #111;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s ease-in-out;
+    animation: fadeInUp 2.5s ease-out;
+    margin-top: 275px;
+}
+
+.cta-button:hover {
+    background: #eab308;
+    transform: scale(1.1);
+
+}
+
+/* Sections */
+.section {
+    background-color: white; /* Set background to white */
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    transition: color 0.3s, transform 0.3s;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.section h2:hover {
+    color: #facc15;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Normal Nav (Blends at Top) */
+nav {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background: transparent;
+    padding: 5px 0; /* Further reduced height */
+    transition: all 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+/* Floating Nav (Appears on Scroll) */
+.sticky {
+    position: fixed;
+    top: 10px; /* Slightly lower float */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(34, 34, 34, 0.9);
+    border-radius: 12px;
+    padding: 5px 0; /* Reduced padding */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    height: 30px; /* Smaller logo */
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: #facc15;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px; /* Slightly smaller text */
+    padding: 6px 12px; /* Adjusted padding for compact nav */
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+
+body {
+    overflow-y: auto; /* Allow scrolling */
+}
+
+/* Hide scrollbar but keep scrolling */
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+body {
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+}
+
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+/* Hide scrollbar for Firefox */
+body {
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar for IE/Edge */
+body {
+    -ms-overflow-style: none;
+}
+
+
+/* Completely hide scrollbar but keep scrolling enabled */
+html, body {
+    overflow: auto; /* Ensure scrolling still works */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar for IE/Edge */
+body {
+    -ms-overflow-style: none;
+}
+
+
+/* Floating Effect on Hover (Only Before Scrolling) */
+nav:not(.sticky) .nav-links a {
+    transition: transform 0.3s ease-in-out, letter-spacing 0.3s;
+}
+
+nav:not(.sticky) .nav-links a:hover {
+    transform: translateY(-3px); /* Slight upward motion */
+    letter-spacing: 1px; /* Slight text expansion */
+    color: #ffdd44; /* Optional: Change text color */
+}
+
+/* Ensure it doesn't apply when sticky */
+.sticky .nav-links a:hover {
+    transform: none; 
+    letter-spacing: normal;
+}
+
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+}
+.carousel {
+    display: flex;
+    gap: 20px;
+    transition: transform 1s ease-in-out;
+    width: max-content;
+}
+.carousel-item {
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+.carousel-image {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.carousel-text {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+
+/* General Carousel Styling */
+.carousel-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+.carousel-container {
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: calc(100% / 3 - 20px);
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Auto-scrolling effect */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-33.33%); }
+    45% { transform: translateX(-33.33%); }
+    50% { transform: translateX(-66.66%); }
+    70% { transform: translateX(-66.66%); }
+    75% { transform: translateX(-100%); }
+    95% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+.carousel-track {
+    animation: scroll 10s infinite linear;
+}
+
+
+    .carousel-container {
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 20px;
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        #image-grid {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            background: white;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            max-width: 1100px;
+            width: 100%;
+            background: white;
+            padding-top: 30px;
+        }
+        
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 3px solid #333; /* Border applied only around the image */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+        
+        .grid-item img:hover {
+            transform: scale(1.1); /* Scales the image slightly on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increases the shadow on hover */
+            border-color: #ff6347; /* Changes the border color on hover */
+        }
+        
+        .text-placeholder {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 16px;
+            color: black;
+            font-weight: 600;
+        }
+        
+
+ /* Basic styling for the navbar links */
+nav a {
+    text-decoration: none; /* Remove default underline */
+    position: relative; /* Required for the pseudo-element */
+    color: #333; /* Or your desired text color */
+}
+
+/* The hover effect */
+nav a::after {
+    content: ''; /* No text, just a line */
+    position: absolute;
+    bottom: 0; /* Position it at the bottom of the link */
+    left: 0;
+    width: 0;
+    height: 2px; /* The thickness of the underline */
+    background-color: #000; /* The color of the underline */
+    transition: width 0.3s ease; /* Smooth animation for the underline */
+}
+
+/* When hovering over the link, expand the underline */
+nav a:hover::after {
+    width: 100%; /* Full width underline */
+}
+
+
+
+
+
+
+
+
+/* Video Section Styling */
+#video-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding-bottom: 100px;
+}
+
+.video-item {
+    margin-bottom: 30px;
+}
+
+.video-item video {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-item p {
+    font-size: 50px;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Optional: Smooth scroll transition for anchor focus */
+:target {
+    scroll-margin-top: 80px; /* Adjust if your navbar is fixed */
+}
